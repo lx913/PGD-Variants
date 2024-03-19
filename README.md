@@ -19,6 +19,6 @@ Use PGD-V2V to attack concept->label
 **Examples:**  
 ```py
 from torchattacks import PGD_V2V  
-attack = torchattacks.PGD(model, eps=5e-2, alpha=1e-2, steps=10, random_start=True)  
+attack = torchattacks.PGD_V2V(model, eps=5e-2, alpha=1e-2, steps=10, random_start=True)  
 adv_images = attack(images, labels)
 ```
