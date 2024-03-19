@@ -13,8 +13,8 @@ class PGD_V2V(Attack):
 
     Arguments:
         model (nn.Module): model to attack.
-        eps (float): maximum perturbation. (Default: 8/255)
-        alpha (float): step size. (Default: 2/255)
+        eps (float): maximum perturbation. (Default: 5e-2)
+        alpha (float): step size. (Default: 1e-2)
         steps (int): number of steps. (Default: 10)
         random_start (bool): using random initialization of delta. (Default: True)
 
@@ -24,7 +24,7 @@ class PGD_V2V(Attack):
         - output: :math:`(N, L)`.
 
     Examples::
-        >>> attack = torchattacks.PGD(model, eps=5e-2, alpha=1e-2, steps=10, random_start=True)
+        >>> attack = torchattacks.PGD_V2V(model, eps=5e-2, alpha=1e-2, steps=10, random_start=True)
         >>> adv_images = attack(images, labels)
 
     """
